@@ -153,6 +153,7 @@ TRANGE              True Range
 TRIMA               Triangular Moving Average
 TRIX                1-day Rate-Of-Change (ROC) of a Triple Smooth EMA
 TSF                 Time Series Forecast
+TSV                 Example
 TYPPRICE            Typical Price
 ULTOSC              Ultimate Oscillator
 VAR                 Variance

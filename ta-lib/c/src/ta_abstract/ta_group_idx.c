@@ -203,6 +203,7 @@ extern const TA_FuncDef TA_DEF_TRANGE;
 extern const TA_FuncDef TA_DEF_TRIMA;
 extern const TA_FuncDef TA_DEF_TRIX;
 extern const TA_FuncDef TA_DEF_TSF;
+extern const TA_FuncDef TA_DEF_TSV;
 extern const TA_FuncDef TA_DEF_TYPPRICE;
 extern const TA_FuncDef TA_DEF_ULTOSC;
 extern const TA_FuncDef TA_DEF_VAR;
@@ -398,6 +399,7 @@ const TA_FuncDef *TA_PerGroupFunc_8[] = {
 &TA_DEF_LINEARREG_SLOPE,
 &TA_DEF_STDDEV,
 &TA_DEF_TSF,
+&TA_DEF_TSV,
 &TA_DEF_VAR,
 NULL };
 #define SIZE_GROUP_8 ((sizeof(TA_PerGroupFunc_8)/sizeof(const TA_FuncDef *))-1)

@@ -158,6 +158,7 @@ libta_func_la_SOURCES = ta_utility.c \
 	ta_TRIMA.c \
 	ta_TRIX.c \
 	ta_TSF.c \
+	ta_TSV.c \
 	ta_TYPPRICE.c \
 	ta_ULTOSC.c \
 	ta_VAR.c \

@@ -12851,6 +12851,73 @@ namespace TicTacTec
          #define TA_TSF Core::Tsf
          #define TA_TSF_Lookback Core::TsfLookback
 
+         static int TsvLookback( int           optInTimePeriod );  /* From 2 to 100000 */
+
+         #if defined( _MANAGED ) && defined( USE_SUBARRAY )
+         static enum class RetCode Tsv( int    startIdx,
+                                        int    endIdx,
+                                        SubArray<double>^ inReal,
+                                        int           optInTimePeriod, /* From 2 to 100000 */
+                                        [Out]int%    outBegIdx,
+                                        [Out]int%    outNBElement,
+                                        SubArray<double>^  outReal );
+
+         static enum class RetCode Tsv( int    startIdx,
+                                        int    endIdx,
+                                        SubArray<float>^ inReal,
+                                        int           optInTimePeriod, /* From 2 to 100000 */
+                                        [Out]int%    outBegIdx,
+                                        [Out]int%    outNBElement,
+                                        SubArray<double>^  outReal );
+
+         static enum class RetCode Tsv( int    startIdx,
+                                        int    endIdx,
+                                        cli::array<double>^ inReal,
+                                        int           optInTimePeriod, /* From 2 to 100000 */
+                                        [Out]int%    outBegIdx,
+                                        [Out]int%    outNBElement,
+                                        cli::array<double>^  outReal )
+         { return Tsv( startIdx, endIdx,
+                          gcnew SubArrayFrom1D<double>(inReal,0),
+              optInTimePeriod, /* From 2 to 100000 */
+             outBegIdx,
+             outNBElement,
+                gcnew SubArrayFrom1D<double>(outReal,0) );
+         }
+         static enum class RetCode Tsv( int    startIdx,
+                                        int    endIdx,
+                                        cli::array<float>^ inReal,
+                                        int           optInTimePeriod, /* From 2 to 100000 */
+                                        [Out]int%    outBegIdx,
+                                        [Out]int%    outNBElement,
+                                        cli::array<double>^  outReal )
+         { return Tsv( startIdx, endIdx,
+                          gcnew SubArrayFrom1D<float>(inReal,0),
+              optInTimePeriod, /* From 2 to 100000 */
+             outBegIdx,
+             outNBElement,
+                gcnew SubArrayFrom1D<double>(outReal,0) );
+         }
+         #elif defined( _MANAGED )
+         static enum class RetCode Tsv( int    startIdx,
+                                        int    endIdx,
+                                        cli::array<double>^ inReal,
+                                        int           optInTimePeriod, /* From 2 to 100000 */
+                                        [Out]int%    outBegIdx,
+                                        [Out]int%    outNBElement,
+                                        cli::array<double>^  outReal );
+         static enum class RetCode Tsv( int    startIdx,
+                                        int    endIdx,
+                                        cli::array<float>^ inReal,
+                                        int           optInTimePeriod, /* From 2 to 100000 */
+                                        [Out]int%    outBegIdx,
+                                        [Out]int%    outNBElement,
+                                        cli::array<double>^  outReal );
+         #endif
+
+         #define TA_TSV Core::Tsv
+         #define TA_TSV_Lookback Core::TsvLookback
+
          static int TypPriceLookback( void );
 
          #if defined( _MANAGED ) && defined( USE_SUBARRAY )

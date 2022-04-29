@@ -348,6 +348,8 @@
 #define TA_TRIX trix
 #define TA_TSF_Lookback tsfLookback
 #define TA_TSF tsf
+#define TA_TSV_Lookback tsvLookback
+#define TA_TSV tsv
 #define TA_TYPPRICE_Lookback typPriceLookback
 #define TA_TYPPRICE typPrice
 #define TA_ULTOSC_Lookback ultOscLookback

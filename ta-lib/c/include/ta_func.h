@@ -5069,6 +5069,38 @@ TA_LIB_API int TA_TSF_Lookback( int           optInTimePeriod );  /* From 2 to 1
 
 
 /*
+ * TA_TSV - Example
+ * 
+ * Input  = double
+ * Output = double
+ * 
+ * Optional Parameters
+ * -------------------
+ * optInTimePeriod:(From 2 to 100000)
+ *    Number of period
+ * 
+ * 
+ */
+TA_LIB_API TA_RetCode TA_TSV( int    startIdx,
+                              int    endIdx,
+                                         const double inReal[],
+                                         int           optInTimePeriod, /* From 2 to 100000 */
+                                         int          *outBegIdx,
+                                         int          *outNBElement,
+                                         double        outReal[] );
+
+TA_LIB_API TA_RetCode TA_S_TSV( int    startIdx,
+                                int    endIdx,
+                                           const float  inReal[],
+                                           int           optInTimePeriod, /* From 2 to 100000 */
+                                           int          *outBegIdx,
+                                           int          *outNBElement,
+                                           double        outReal[] );
+
+TA_LIB_API int TA_TSV_Lookback( int           optInTimePeriod );  /* From 2 to 100000 */
+
+
+/*
  * TA_TYPPRICE - Typical Price
  * 
  * Input  = High, Low, Close
