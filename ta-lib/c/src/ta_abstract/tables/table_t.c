@@ -223,6 +223,32 @@ DEF_FUNCTION( TSF,                   /* name */
              );
 /* TSF END */
 
+/* TSV BEGIN */
+static const TA_InputParameterInfo *TA_TSV_Inputs[] =
+{
+	&TA_DEF_UI_Input_Real,
+	NULL
+};
+
+static const TA_OutputParameterInfo *TA_TSV_Outputs[] =
+{
+	&TA_DEF_UI_Output_Real,
+	NULL
+};
+
+static const TA_OptInputParameterInfo *TA_TSV_OptInputs[] =
+{ &TA_DEF_UI_TimePeriod_14_MINIMUM2,
+NULL
+};
+
+DEF_FUNCTION(TSV,                   /* name */
+	TA_GroupId_Statistic,  /* groupId */
+	"Example",/* hint */
+	"Tsv",                 /* CamelCase name */
+	TA_FUNC_FLG_OVERLAP    /* flags */
+	);
+/* TSV END */
+
 /* TYPPRICE BEGIN */
 static const TA_InputParameterInfo    *TA_TYPPRICE_Inputs[]    =
 {
@@ -260,6 +286,7 @@ const TA_FuncDef *TA_DEF_TableT[] =
    ADD_TO_TABLE(TRIMA),
    ADD_TO_TABLE(TRIX),
    ADD_TO_TABLE(TSF),
+   ADD_TO_TABLE(TSV),
    ADD_TO_TABLE(TYPPRICE),
    NULL
 };
